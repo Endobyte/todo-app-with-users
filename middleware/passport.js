@@ -42,5 +42,3 @@ passport.deserializeUser(async function (user, cb) {
 });
 
 module.exports.passport = passport;
-
-// resume on slide 26
