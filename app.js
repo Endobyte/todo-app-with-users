@@ -28,6 +28,9 @@ app.use(session({
     maxAge: 6*60*60*1000
   }
 }));
+const {passport} = require('./middleware/passport');
+app.use(passport.initialize());
+app.use(passport.authenticate('session'));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
